@@ -1,0 +1,128 @@
+<IfModule mod_autoindex.c>
+    Options +Indexes
+    IndexOptions +Charset=UTF-8 +FancyIndexing +FoldersFirst +HTMLTable +IconsAreLinks +IgnoreCase +NameWidth=* +SuppressDescription +SuppressRules +XHTML +ShowForbidden
+    IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+    IndexIgnore .??* *~ *#
+
+    AddIcon /.apaxy/icons/blank.png ^^BLANKICON^^
+    AddIcon /.apaxy/icons/folder.png ^^DIRECTORY^^
+    AddIcon /.apaxy/icons/folder-home.png ..
+
+    AddIconByType (bmp,/.apaxy/icons/bmp.png) image/bmp
+    AddIconByType (draw,/.apaxy/icons/draw.png) image/svg+xml
+    AddIconByType (gif,/.apaxy/icons/gif.png) image/gif
+    AddIconByType (ico,/.apaxy/icons/ico.png) image/x-icon
+    AddIconByType (jpg,/.apaxy/icons/jpg.png) image/jpeg
+    AddIconByType (png,/.apaxy/icons/png.png) image/png
+    AddIconByType (ps,/.apaxy/icons/eps.png) application/postscript
+    AddIconByType (psd,/.apaxy/icons/psd.png) image/vnd.adobe.photoshop
+    AddIconByType (tiff,/.apaxy/icons/tiff.png) image/tiff
+    AddIcon /.apaxy/icons/image.png .oti
+    AddIconByType (image,/.apaxy/icons/image.png) image/* \
+                                                  application/vnd.oasis.opendocument.graphics \
+                                                  application/vnd.oasis.opendocument.graphics-template \
+                                                  application/vnd.oasis.opendocument.image \
+                                                  application/vnd.oasis.opendocument.image-template
+    AddIconByType (playlist,/.apaxy/icons/playlist.png) audio/x-mpegurl \
+                                                        application/vnd.apple.mpegurl \
+                                                        application/pls+xml
+    AddIconByType (audio,/.apaxy/icons/audio.png) audio/*
+    AddIconByType (playlist,/.apaxy/icons/video.png) video/vnd.mpegurl
+    AddIconByType (video,/.apaxy/icons/video.png) video/*
+    AddIconByType (html,/.apaxy/icons/html.png) text/html \
+                                                application/xhtml+xml \
+    AddIconByType (rss,/.apaxy/icons/rss.png) application/rss+xml \
+                                              application/atom+xml
+    AddIconByType (vcal,/.apaxy/icons/vcal.png) text/calendar \
+                                                text/x-vcalendar
+    AddIconByType (vcard,/.apaxy/icons/vcard.png) text/vcard \
+                                                  text/x-vcard
+    AddIconByType (torrent,/.apaxy/icons/torrent.png) application/x-bittorrent
+    AddIcon /.apaxy/icons/calc.png .otc
+    AddIconByType (calc,/.apaxy/icons/calc.png) application/vnd.oasis.opendocument.chart \
+                                                application/vnd.oasis.opendocument.chart-template \
+                                                application/vnd.oasis.opendocument.formula \
+                                                application/vnd.oasis.opendocument.formula-template \
+                                                application/vnd.oasis.opendocument.spreadsheet \
+                                                application/vnd.oasis.opendocument.spreadsheet-template \
+                                                text/csv \
+                                                application/vnd.ms-excel \
+                                                application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    AddIconByType (doc,/.apaxy/icons/doc.png) application/vnd.oasis.opendocument.text \
+                                              application/vnd.oasis.opendocument.text-master \
+                                              application/vnd.oasis.opendocument.text-template \
+                                              application/vnd.oasis.opendocument.text-web \
+                                              application/msword \
+                                              application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    AddIconByType (slideshow,/.apaxy/icons/pres.png) application/vnd.oasis.opendocument.presentation \
+                                                     application/vnd.oasis.opendocument.presentation-template \
+                                                     application/vnd.ms-powerpoint \
+                                                     application/vnd.openxmlformats-officedocument.presentationml.presentation \
+                                                     application/vnd.openxmlformats-officedocument.presentationml.slideshow
+    AddIconByType (database,/.apaxy/icons/unknown.png) application/x-msaccess \
+                                                       application/vnd.oasis.opendocument.database
+    AddIconByType (pdf,/.apaxy/icons/pdf.png) application/pdf
+    AddIconByType (rtf,/.apaxy/icons/rtf.png) application/rtf
+    AddIconByType (tex,/.apaxy/icons/tex.png) application/x-latex \
+                                              application/x-tex
+    #AddIconByType (h,/.apaxy/icons/h.png) text/x-h
+    AddIcon /.apaxy/icons/h.png .h
+    AddIcon /.apaxy/icons/hpp.png .hpp
+    AddIcon /.apaxy/icons/cpp.png .cpp
+    AddIcon /.apaxy/icons/c.png .c
+    AddIconByType (c,/.apaxy/icons/c.png) text/x-c
+    AddIconByType (java,/.apaxy/icons/java.png) text/x-java-source \
+                                                application/java-archive \
+                                                application/java-vm
+    AddIcon /.apaxy/icons/css.png .sass .scss
+    AddIconByType (css,/.apaxy/icons/css.png) text/css
+    AddIconByType (js,/.apaxy/icons/js.png) application/javascript
+    AddIconByType (json,/.apaxy/icons/json.png) application/json
+    AddIcon /.apaxy/icons/diff.png .diff .patch
+    AddIcon /.apaxy/icons/makefile.png Makefile
+    AddIcon /.apaxy/icons/php.png .php .phtml
+    AddIcon /.apaxy/icons/py.png .py
+    AddIcon /.apaxy/icons/rb.png .rb
+    AddIconByType (sql,/.apaxy/icons/sql.png) application/x-sql
+    AddIconByType (xml,/.apaxy/icons/xml.png) application/xml \
+                                              application/xml-dtd
+    AddIcon /.apaxy/icons/package.png .pkg
+    AddIconByType (bin,/.apaxy/icons/bin.png) application/octet-stream
+    AddIcon /.apaxy/icons/log.png .log
+    AddIconByType (cd,/.apaxy/icons/cd.png) application/x-iso9660-image
+    AddIconByType (deb,/.apaxy/icons/deb.png) application/x-debian-package
+    AddIcon /.apaxy/icons/install.png .msi
+    AddIcon /.apaxy/icons/exe.png .exe
+    AddIconByType (exe,/.apaxy/icons/exe.png) application/x-msdownload
+    AddIconByType (package,/.apaxy/icons/package.png) application/x-apple-diskimage \
+                                                      application/vnd.apple.installer+xml \
+                                                      application/vnd.android.package-archive
+    AddIcon /.apaxy/icons/rpm.png .rpm
+    AddIconByType (script,/.apaxy/icons/script.png) application/x-sh
+    AddIcon /.apaxy/icons/font.png .otf
+    AddIconByType (font,/.apaxy/icons/font.png) font/*
+    #AddIconByType (gzip,/.apaxy/icons/gzip.png) application/gzip
+    AddIcon /.apaxy/icons/gzip.png .gzip .gz
+    AddIconByType (rar,/.apaxy/icons/rar.png) application/x-rar-compressed
+    AddIconByType (tar,/.apaxy/icons/tar.png) application/x-tar
+    AddIconByType (zip,/.apaxy/icons/zip.png) application/zip
+    AddIconByType (archive,/.apaxy/icons/archive.png) application/x-7z-compressed \
+                                                      application/x-bzip \
+                                                      application/x-bzip2 \
+                                                      application/vnd.ms-cab-compressed
+    AddIconByType (text,/.apaxy/icons/image.png) application/x-cbr
+    AddIconByType (text,/.apaxy/icons/text.png) application/epub+zip \
+                                                application/x-mobipocket-ebook \
+                                                application/vnd.amazon.ebook
+    AddIcon /.apaxy/icons/readme.png README
+    #AddIconByType (markdown,/.apaxy/icons/markdown.png) text/mardown
+    AddIcon /.apaxy/icons/markdown.png .markdown .md
+    AddIcon /.apaxy/icons/script.png .conf
+    AddIcon /.apaxy/icons/text.png .for
+    AddIcon /.apaxy/icons/text.png .uu
+    AddIconByType (text,/.apaxy/icons/text.png) text/*
+    DefaultIcon /.apaxy/icons/default.png
+
+    ReadmeName /.apaxy/script.html
+    IndexStyleSheet /.apaxy/apaxy.css
+</IfModule>

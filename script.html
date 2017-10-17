@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    document.title = window.location.host;
+    var parent = document.querySelector('[alt="[PARENTDIR]"]');
+    if (parent) {
+        parent.offsetParent.parentElement.className = 'parent';
+    }
+    var uri = window.location.pathname.substr(1);
+    if (uri.substring(uri.length - 1) != '/') {
+        var names = document.getElementsByClassName('indexcolname');
+        var icons = document.getElementsByClassName('indexcolicon');
+        var i = names.length;
+        while (i-- > 1) {
+            if (icons[i].firstChild.firstChild.getAttribute('alt') === '[DIR]') {
+                var a = names[i].firstChild;
+                a.href = '/' + uri + '/' + a.getAttribute('href', 2).replace(/\/$/, '.' + window.location.host);
+            }
+        }
+    }
+</script>
